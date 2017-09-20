@@ -1,0 +1,116 @@
+body, html {
+	height: 100%;
+}
+
+.bg{
+	background-image: url("../images/ringfull.png");
+	height: 100%;
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img-char{
+	display: inline-block;
+	padding: 3px;
+	margin-bottom: 20px;
+}
+
+.character{
+	padding: 20px;
+	display: inline-block;
+}
+.enemy{
+	padding: 20px;
+	display: inline-block;
+}
+
+.charName{
+	text-align: center;
+	color:white;
+	font-size: 20px;
+	font-weight: 900;
+	text-shadow: -2px 0 black, 2px 0 black, 0 -2px black;
+}
+
+#defender > .enemy{
+	border: 1px solid black;
+	background-color: black;
+	padding: 20px;
+	display: inline-block;
+	color: white;
+}
+
+.avatar img{
+	width:30%;
+	display: inline-block;
+}
+
+.healthBarShell {
+  width: 50%;
+  height: 50px;
+  background: rgba(0,0,0,.5);
+  border-radius: 12px;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 10px 16px 0px 15px;
+  display: inline-block;
+}
+
+.health{
+	background-color:rgba(0, 0, 0, 0.5);
+	height: 200px;
+}
+
+.healthBarValue {
+  width: 100%;
+  height: 30px;
+  background: rgba(255,0,0,.5);
+  border-radius: 6px;
+  border: solid 1px;
+  border-color: rgba(255,255,255,.7);
+  box-sizing: border-box;
+  margin: 0px;
+  position: relative;
+}
+
+#message{
+	text-align: center;
+	color:white;
+	font-size: 50px;
+	font-weight: 900;
+	text-shadow: -2px 0 black, 2px 0 black, 0 -2px black;
+}
+
+#video-wrapper {
+   position: fixed;
+   top: 0; 
+   right: 0; 
+   bottom: 0; 
+   left: 0;
+   overflow: hidden;
+   z-index: 1000;
+}
+
+#video-wrapper >  #player {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   cursor:pointer;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    #video-wrapper >  #player { 
+       height: 100%; 
+       xtop: -100%; 
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    #video-wrapper > #player { 
+       width: 100%; 
+       xleft: -100%; 
+    }
+}
