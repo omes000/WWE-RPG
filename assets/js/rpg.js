@@ -91,7 +91,7 @@ $(document).ready(function(){
 	$("#player").on('ended', function(){
 		$("#video-wrapper").hide();
 		$("#player").get(0).pause();
-	}
+	});
 
 	updateStats();
 
