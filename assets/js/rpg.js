@@ -82,7 +82,6 @@ $(document).ready(function(){
 
     //pauses the video and hides it if 'enter' is pushed
 	$("body").keyup(function(event){
-		console.log("HELLO");
 		if(event.which ==13){
 			$("#video-wrapper").hide();
 			$("#player").get(0).pause();
