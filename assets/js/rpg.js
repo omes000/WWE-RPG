@@ -87,6 +87,11 @@ $(document).ready(function(){
 			$("#player").get(0).pause();
 		}
 	});
+	
+	$("#player").on('ended', function(){
+		$("#video-wrapper").hide();
+		$("#player").get(0).pause();
+	}
 
 	updateStats();
 
