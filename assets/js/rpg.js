@@ -177,13 +177,24 @@ $(document).ready(function(){
 		if (defender != "" && !playerLoss){
 
 			//calculates the percentage of the hit
-			percentEnemy = 100-(yourChar.attack/defender.health) *100;
+			if(defender.health>0){
+				percentEnemy = 100-(yourChar.attack/defender.health) * 100;
+			}
+			else{
+				percentEnemy = 0;
+			}
 			defender.health -= yourChar.attack;
 
 			//updates the health bar
 			$('.healthBarValue').css('width', percentEnemy + '%' );
 
-			percentYou = 100-(defender.attack/yourChar.health) *100;
+			if(yourChar.health > 0){
+				percentYou = 100-(defender.attack/yourChar.health) * 100;
+			}
+			else{
+				percentYou = 0;
+			}
+			
 			yourChar.health -= defender.attack;
 			$('#yourBar').css('width', percentYou + '%' );
 
@@ -204,7 +215,7 @@ $(document).ready(function(){
 			$("#message").text("Pick a defender");
 		}
 	});
-	
+
 	$("#reset").on("click", function(){
 		location.reload();
 	});
