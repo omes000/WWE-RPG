@@ -138,29 +138,21 @@ $(document).ready(function(){
 			$(this).parent().removeClass("text-center")
 			$(this).children().remove("p");
 
+			//This sends the not chosen enemies to the sides of the ring.
+			$(this).siblings(".enemy:first").appendTo("#enemy1");
+			$(this).siblings(".enemy:last").appendTo("#enemy2");
+			$(this).appendTo("#enemyAvatar");
+
 			if($(this).attr("id") == "undertakerBox"){
 				defender = undertaker;
-				//This sends the not chosen enemies to the sides of the ring.
-				$(this).siblings(".enemy:first").appendTo("#enemy1");
-				$(this).siblings(".enemy:last").appendTo("#enemy2");
-				$(this).appendTo("#enemyAvatar");
 			}
 			else if($(this).attr("id") == "darkbretBox"){
-				$(this).siblings(".enemy:first").appendTo("#enemy1");
-				$(this).siblings(".enemy:last").appendTo("#enemy2");
-				$(this).appendTo("#enemyAvatar");
 				defender = darkbret;
 			}
 			else if($(this).attr("id") == "darkseanBox"){
-				$(this).siblings(".enemy:first").appendTo("#enemy1");
-				$(this).siblings(".enemy:last").appendTo("#enemy2");
-				$(this).appendTo("#enemyAvatar");
 				defender = darksean;
 			}
 			else if($(this).attr("id") == "darkhulkBox"){
-				$(this).siblings(".enemy:first").appendTo("#enemy1");
-				$(this).siblings(".enemy:last").appendTo("#enemy2");
-				$(this).appendTo("#enemyAvatar");
 				defender = darkhulk;
 			}
 		}
